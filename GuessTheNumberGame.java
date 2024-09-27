@@ -10,7 +10,7 @@ public class GuessTheNumberGame {
         
         // Initialize the number of attempts and score
         int attempts = 0;
-        int score = 0;
+        int score = 100;
         
         // Keep playing until the user guesses the number or runs out of attempts
         while (true) {
@@ -27,13 +27,13 @@ public class GuessTheNumberGame {
             else if (guess > randomNumber) {
                 JOptionPane.showMessageDialog(null, "Too high, try again!");
                 attempts++;
-                score += 10;
+                score -= 10;
             }
             // Otherwise, the guess is too low
             else {
                 JOptionPane.showMessageDialog(null, "Too low, try again!");
                 attempts++;
-                score += 10;
+                score -= 10;
             }
             
             // Check if the user has run out of attempts
